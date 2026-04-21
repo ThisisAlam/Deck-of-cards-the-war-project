@@ -6,7 +6,7 @@
     <title>The WAR Solitaire</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="indexAI.css">
 </head>
 <body>
     <!-- HEADER -->
@@ -21,7 +21,7 @@
     <!-- MAIN -->
     <main> 
         <!-- SECTION 1 - CONTROLS -->
-        <section class="controls">
+        <!-- <section class="controls">
             <button id="new-deck" class="btn-new-deck">New Deck</button>
             <div class="theme-toggle-container">
                 <label for="theme-toggle">🌙</label>
@@ -29,7 +29,7 @@
                 <label for="theme-toggle">☀️</label>
             </div>
         </section>
-        
+         -->
         <!-- SECTION 2 - STATUS -->
         <section class="status">
             <h2 id="status-text">Status: Ready</h2>
@@ -44,7 +44,7 @@
             <div class="computer-player">
                 <p class="score">Card score: <span id="computer-score">0</span></p>
                 <div class="card-slot1">
-                    <!-- <img id="computer-card" src="" alt="Computer card"> -->
+                    <img id="computer-card" src="images/default-image-1.jpg" alt="Computer card">
                 </div>
                 <p class="total-score">Computer score: <span id="total-computer-score">0</span></p>
             </div>
@@ -52,7 +52,7 @@
             <div class="user-player">
                 <p class="score">Card score: <span id="user-score">0</span></p>
                 <div class="card-slot2">
-                    <!-- <img id="user-card" src="" alt="Your card"> -->
+                    <img id="user-card" src="images/default-image-2.jpg" alt="Your card">
                 </div>
                 <p class="total-score">My score: <span id="total-user-score">0</span></p>
             </div>
@@ -61,8 +61,15 @@
 
     <!-- FOOTER - ACTION BUTTON -->
     <footer class="footer-action">
+        <button id="new-deck" class="btn-new-deck">New Deck</button>
         <button id="draw-cards" class="btn-action">Draw Cards</button>
     </footer>
+
+    <div class="theme-toggle-container">
+        <label for="theme-toggle">☀️</label>
+        <input type="checkbox" id="theme-toggle" class="theme-toggle">
+        <label for="theme-toggle">🌙</label>
+    </div>
 
     <!-- JavaScript -->
     <script src="index.js" type="module"></script>

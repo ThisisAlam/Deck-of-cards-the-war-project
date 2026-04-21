@@ -35,7 +35,7 @@ function winOrLose(){
         } else {
             document.getElementById('status-text').textContent='STATUS: GAME IS A TIE'
         }
-        // alert('No more cards in the deck! Please shuffle a new deck.');
+        alert('No more cards in the deck! Please shuffle a new deck.');
         document.getElementById('draw-cards').disabled = true;
     }
 }
@@ -62,8 +62,10 @@ async function drawCards(){
     card1 = data.cards[0];
     card2 = data.cards[1];
     console.log('Card 1 drawn:', card1.code, 'Card 2 drawn:', card2.code);
-    document.querySelector('.card-slot1').innerHTML = `<img id="computer-card" src="${card1.image}" alt="Computer's card">`;
-    document.querySelector('.card-slot2').innerHTML = `<img id="user-card" src="${card2.image}" alt="Your card">`;  
+
+    document.getElementById('computer-card').src = `${card1.image}`;
+    document.getElementById('user-card').src = `${card2.image}`;  
+    
     cardOneValue += cardValues(card1.value)
     cardTwoValue += cardValues(card2.value)
     cardOneValueEachCard = cardValues(card1.value)
@@ -90,3 +92,9 @@ addEventListener('click', newDeckCard)
 
 document.getElementById('draw-cards').
 addEventListener('click', drawCards)
+
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-theme");
+});

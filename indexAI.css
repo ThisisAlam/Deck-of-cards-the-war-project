@@ -1,0 +1,232 @@
+/* RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   🌞 LIGHT THEME (DEFAULT)
+========================= */
+:root {
+    --bg: #E8F0E8;
+    --surface: #FDF6E3;
+    --card: #FFFFFF;
+
+    --primary: #C9A44C;
+    --secondary: #C44536;
+
+    --text-main: #2C2C2C;
+    --text-muted: #6B6B6B;
+
+    --border: #D8C9A3;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+/* =========================
+   🌙 DARK THEME
+========================= */
+.dark-theme {
+    --bg: #0B1D3A;
+    --surface: #13294B;
+    --card: #F5F5DC;
+
+    --primary: #D4AF37;
+    --secondary: #8B1E1E;
+
+    --text-main: #EAEAEA;
+    --text-muted: #AAB4C4;
+
+    --border: #C9A44C;
+    --shadow: rgba(0,0,0,0.4);
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    width: 450px;
+    margin: 10px auto;
+    transition: 0.3s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed var(--border);
+}
+
+.header-icon {
+    width: 60px;
+}
+
+.header-title {
+    font-family: "Cinzel", serif;
+    color: var(--primary);
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* =========================
+   STATUS
+========================= */
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 2px solid var(--border);
+    padding: 0.5rem;
+    background: var(--surface);
+}
+
+#status-text,
+.remaining {
+    text-align: center;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+#remaining-count {
+    border: 2px solid var(--border);
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+/* =========================
+   GAME AREA
+========================= */
+.game-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* PLAYER CARDS */
+.computer-player,
+.user-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: 2px solid var(--border);
+    padding: 10px;
+    background: var(--surface);
+}
+
+/* SCORES */
+.score, .total-score {
+    color: var(--text-muted);
+}
+
+#computer-score,
+#user-score,
+#total-computer-score,
+#total-user-score {
+    border: 2px solid var(--border);
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+/* CARD SLOT */
+.card-slot1,
+.card-slot2 {
+    width: 100px;
+    height: 140px;
+    border: 2px dashed var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--card);
+    box-shadow: 0 4px 10px var(--shadow);
+    border-radius: 8px;
+}
+
+.card-slot1 img,
+.card-slot2 img {
+    max-width: 100%;
+}
+
+/* =========================
+   FOOTER BUTTONS
+========================= */
+footer {
+    display: flex;
+    gap: 5px;
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+}
+
+.btn-new-deck {
+    width: 30%;
+    background: var(--primary);
+    color: #222;
+    border: 3px solid #9a6e00;
+    cursor: pointer;
+}
+
+.btn-action {
+    width: 70%;
+    background: var(--secondary);
+    color: white;
+    border: 3px solid #840000;
+    cursor: pointer;
+}
+
+/* =========================
+   TOGGLE SWITCH
+========================= */
+.theme-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background: var(--border);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.theme-toggle::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.theme-toggle:checked::before {
+    transform: translateX(20px);
+    background: var(--primary);
+}
