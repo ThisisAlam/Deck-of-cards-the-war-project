@@ -98,3 +98,10 @@ const toggle = document.getElementById("theme-toggle");
 toggle.addEventListener("change", () => {
     document.body.classList.toggle("dark-theme");
 });
+
+document.body.classList.add("deck-loaded");
+
+// remove effect after a short time
+setTimeout(() => {
+    document.body.classList.remove("deck-loaded");
+}, 800);
