@@ -1,0 +1,165 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Cinzel, Inter, sans-serif;
+    background-color: #f0f0f0;
+    margin: 10px auto;
+    width: 450px;
+    height: 600px;
+}
+
+header{
+    position: relative;
+    height: 20%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        border: 2px dashed #ccc;
+        .header-icon {
+            width: 70px;
+        }
+        .header-title {
+            font-size: 1.5rem;
+            color: #333;
+        }
+    } 
+}
+main {
+    height: 68%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid #ccc;
+        .btn-new-deck {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: goldenrod;
+            color: #333;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .remaining {
+            font-size: 1rem;
+            color: #333;
+            #remaining-count{
+                border: 2px solid #ccc;
+                padding: 0.2rem 0.5rem;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+        }
+    }
+    .status{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem;
+        /* border: 2px solid #ccc; */
+        #status-text {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .theme-toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .theme-toggle {
+                width: 40px;
+                height: 20px;
+                position: relative;
+                appearance: none;
+                background-color: #ccc;
+                outline: none;
+                border-radius: 20px;
+                cursor: pointer;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    width: 16px;
+                    height: 16px;
+                    background-color: white;
+                    border-radius: 50%;
+                    transition: transform 0.3s ease-in-out;
+                }
+                &:checked::before{
+                    transform: translateX(20px);
+                    background-color:rgb(225, 184, 79);
+                }
+            }
+        }
+    }
+    .game-area{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        padding: 0.5rem;
+        .computer-player, .user-player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 190px;
+            height: 230px;
+            border: 2px solid #ccc;
+            .score {
+                font-size: 1rem;
+                color: #333;
+                #computer-score, #user-score {
+                    border: 2px solid #ccc;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 3px;
+                    font-weight: bold;
+                }
+            }
+            .card-slot {
+                width: 100px;
+                height: 140px;
+                border: 2px dashed #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    .btn-action {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #bd4444;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}

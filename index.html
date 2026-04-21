@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The WAR Solitaire</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div>
+            <img src="images/logo-left-removebg-preview.png" alt="card icon" class="header-icon">
+            <h1 class="header-title">The WAR Solitaire</h1>
+            <img src="images/logo-right-removebg-preview.png" alt="card icon" class="header-icon">
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main> 
+        <!-- SECTION 1 - CONTROLS -->
+        <section class="controls">
+            <button id="new-deck" class="btn-new-deck">New Deck</button>
+            <p class="remaining">
+                Remaining cards: <span id="remaining-count">52</span>
+            </p>
+        </section>
+
+        <!-- SECTION 2 - STATUS -->
+        <section class="status">
+            <h2 id="status-text">Status: Ready</h2>
+            <div class="theme-toggle-container">
+                <label for="theme-toggle">🌙</label>
+                <input type="checkbox" id="theme-toggle" class="theme-toggle">
+                <label for="theme-toggle">☀️</label>
+            </div>
+        </section>
+
+        <!-- SECTION 3 - GAME AREA -->
+        <section class="game-area">
+            <!-- COMPUTER SIDE -->
+            <div class="computer-player">
+                <p class="score">Computer score: <span id="computer-score">0</span></p>
+                <div class="card-slot">
+                    <!-- <img id="computer-card" src="" alt="Computer card"> -->
+                </div>
+            </div>
+            <!-- PLAYER SIDE -->
+            <div class="user-player">
+                <p class="score">My score: <span id="user-score">0</span></p>
+                <div class="card-slot">
+                    <!-- <img id="user-card" src="" alt="Your card"> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER - ACTION BUTTON -->
+    <footer class="footer-action">
+        <button id="draw-cards" class="btn-action">Draw Cards</button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js" type="module"></script>
+</body>
+</html>
