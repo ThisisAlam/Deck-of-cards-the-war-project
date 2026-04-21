@@ -11,18 +11,18 @@ body {
 
 header{
     position: relative;
-    height: 20%;
+    height: 15%;
     border: 1px solid #ccc;
     padding: 0.5rem;
     div{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
         height: 100%;
         border: 2px dashed #ccc;
         .header-icon {
-            width: 70px;
+            width: 60px;
         }
         .header-title {
             font-size: 1.5rem;
@@ -31,7 +31,7 @@ header{
     } 
 }
 main {
-    height: 68%;
+    height: 75%;
     border: 1px solid #ccc;
     padding: 0.5rem;
     justify-content: space-around;
@@ -107,6 +107,7 @@ main {
             text-align: center;
             color: #333;
             #remaining-count{
+                margin: 0;
                 border: 2px solid #ccc;
                 padding: 0.2rem 0.5rem;
                 border-radius: 3px;
@@ -122,15 +123,26 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 5px;
-            width: 220px;
-            height: 230px;
+            justify-content: space-between;
+            width: 215px;
+            height: 260px;
             border: 2px solid #ccc;
             .score {
-                margin-top: 20px;
+                /* margin: 0; */
                 font-size: 1rem;
                 color: #333;
                 #computer-score, #user-score {
+                    border: 2px solid #ccc;
+                    padding: 0.2rem 0.5rem;
+                    border-radius: 3px;
+                    font-weight: bold;
+                }
+            }
+            .total-score {
+                /* margin: 0; */
+                font-size: 1rem;
+                color: #333;
+                #total-computer-score, #total-user-score {
                     border: 2px solid #ccc;
                     padding: 0.2rem 0.5rem;
                     border-radius: 3px;
@@ -157,7 +169,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12%;
+    height: 10%;
     border: 1px solid #ccc;
     padding: 0.5rem;
     .btn-action {
