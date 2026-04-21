@@ -23,19 +23,19 @@
         <!-- SECTION 1 - CONTROLS -->
         <section class="controls">
             <button id="new-deck" class="btn-new-deck">New Deck</button>
-            <p class="remaining">
-                Remaining cards: <span id="remaining-count">52</span>
-            </p>
-        </section>
-
-        <!-- SECTION 2 - STATUS -->
-        <section class="status">
-            <h2 id="status-text">Status: Ready</h2>
             <div class="theme-toggle-container">
                 <label for="theme-toggle">🌙</label>
                 <input type="checkbox" id="theme-toggle" class="theme-toggle">
                 <label for="theme-toggle">☀️</label>
             </div>
+        </section>
+        
+        <!-- SECTION 2 - STATUS -->
+        <section class="status">
+            <h2 id="status-text">Status: Ready</h2>
+            <p class="remaining">
+                Remaining cards: <span id="remaining-count">0</span>
+            </p>
         </section>
 
         <!-- SECTION 3 - GAME AREA -->
@@ -43,14 +43,14 @@
             <!-- COMPUTER SIDE -->
             <div class="computer-player">
                 <p class="score">Computer score: <span id="computer-score">0</span></p>
-                <div class="card-slot">
+                <div class="card-slot1">
                     <!-- <img id="computer-card" src="" alt="Computer card"> -->
                 </div>
             </div>
             <!-- PLAYER SIDE -->
             <div class="user-player">
                 <p class="score">My score: <span id="user-score">0</span></p>
-                <div class="card-slot">
+                <div class="card-slot2">
                     <!-- <img id="user-card" src="" alt="Your card"> -->
                 </div>
             </div>

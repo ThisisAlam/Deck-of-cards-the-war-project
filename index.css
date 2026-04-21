@@ -34,14 +34,15 @@ main {
     height: 68%;
     border: 1px solid #ccc;
     padding: 0.5rem;
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     .controls {
         display: flex;
         justify-content: space-around;
         align-items: center;
         gap: 10px;
+        padding: 0.5rem;
         border: 2px solid #ccc;
         .btn-new-deck {
             padding: 0.5rem 1rem;
@@ -51,27 +52,6 @@ main {
             border: none;
             border-radius: 2px;
             cursor: pointer;
-        }
-        .remaining {
-            font-size: 1rem;
-            color: #333;
-            #remaining-count{
-                border: 2px solid #ccc;
-                padding: 0.2rem 0.5rem;
-                border-radius: 3px;
-                font-weight: bold;
-            }
-        }
-    }
-    .status{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0.5rem;
-        /* border: 2px solid #ccc; */
-        #status-text {
-            font-size: 1.2rem;
-            color: #333;
         }
         .theme-toggle-container {
             display: flex;
@@ -104,21 +84,50 @@ main {
             }
         }
     }
-    .game-area{
+    .status{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 10px;
+        flex-direction: column;
         padding: 0.5rem;
+        border: 2px solid #ccc;
+        #status-text {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+            border: 1px solid #ccc;
+            width: 100%;
+            text-align: center;
+        }
+        .remaining {
+            margin: 5px 0;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            width: 100%;
+            text-align: center;
+            color: #333;
+            #remaining-count{
+                border: 2px solid #ccc;
+                padding: 0.2rem 0.5rem;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+        }
+    }
+    .game-area{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         .computer-player, .user-player {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 5px;
-            width: 190px;
+            width: 220px;
             height: 230px;
             border: 2px solid #ccc;
             .score {
+                margin-top: 20px;
                 font-size: 1rem;
                 color: #333;
                 #computer-score, #user-score {
@@ -128,7 +137,7 @@ main {
                     font-weight: bold;
                 }
             }
-            .card-slot {
+            .card-slot1, .card-slot2{
                 width: 100px;
                 height: 140px;
                 border: 2px dashed #ccc;
